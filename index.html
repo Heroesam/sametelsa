@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bonne fête Elsa — un site plein d'amour, de compliments, d'animations et de surprises." />
+  <meta property="og:title" content="Bonne fête Elsa" />
+  <meta property="og:description" content="Un site moderne, doux et vibrant, juste pour toi." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Bonne fête Elsa</title>
+</head>
+<body class="locked">
+  <div class="gate" id="gate">
+    <div class="gate__glass"></div>
+    <div class="gate__card">
+      <div class="chip">Accès privé</div>
+      <h1>Bonjour Elsa</h1>
+      <p>Entre le mot secret pour découvrir ta page.</p>
+      <form id="gate-form">
+        <input type="password" id="gate-input" placeholder="Mot de passe" autocomplete="current-password" required />
+        <button type="submit" class="btn primary full">Entrer</button>
+        <p class="gate__error" id="gate-error" aria-live="polite"></p>
+      </form>
+      <small class="hint">Indice : toutou et déssert.</small>
+    </div>
+  </div>
+
+  <div class="app" id="app">
+    <div class="bg-glow"></div>
+    <div class="bg-orbs"></div>
+    <div class="grain"></div>
+    <div class="float-hearts"></div>
+
+    <header class="hero" data-animate>
+      <div class="chip">Aujourd'hui c'est ta fête ✨</div>
+      <h1>Bonne fête <span class="highlight">Elsa</span></h1>
+      <p class="lede">Un site juste pour toi : des mots doux, une vibe cosy et un bouquet d'attentions dans un style clean & lumineux.</p>
+      <div class="cta">
+        <button class="btn primary" id="wish-btn">Déployer une pluie de love</button>
+        <a class="btn ghost" href="#moments">Voir nos moments</a>
+        <a class="btn soft" id="hug-btn" href="mailto:samcontact@elsaetsam.fr?subject=Commander%20un%20câlin&body=Hey%20toi%20!%20Je%20t'ai%20commandé%20un%20câlin%20VIP%20(taille%20XXL).%20Quand%20est-ce%20qu'on%20le%20programme%20?">Commander un câlin</a>
+      </div>
+      <div class="tags">
+        <span class="pill">Lumineuse</span>
+        <span class="pill">Drôle & brillante</span>
+        <span class="pill">Inimitable</span>
+        <span class="pill">Mon coup de coeur</span>
+      </div>
+      <div class="scroll-hint">
+        <span>On descend ?</span>
+        <div class="chevrons">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section cards" id="compliments">
+        <div class="section-head" data-animate>
+          <div class="eyebrow">Compliments en rafale</div>
+          <h2>Tout ce que j'adore chez toi</h2>
+          <p>Une collection de petites choses qui me font sourire chaque jour.</p>
+        </div>
+        <div class="grid">
+          <article class="card tilt" data-animate>
+            <h3>Rayon de soleil</h3>
+            <p>Tu illumines les pièces comme si elles avaient attendu ta lumière.</p>
+          </article>
+          <article class="card tilt" data-animate>
+            <h3>Naturelle & sincère</h3>
+            <p>Ta sincérité est rare : elle apaise, elle rassure, elle fait du bien.</p>
+          </article>
+          <article class="card tilt" data-animate>
+            <h3>Rire contagieux</h3>
+            <p>Ton rire déclenche des cascades de bonne humeur – impossible d'y résister.</p>
+          </article>
+          <article class="card tilt" data-animate>
+            <h3>Style, toujours</h3>
+            <p>Décontractée mais toujours chic : ta signature, c'est toi et personne d'autre.</p>
+          </article>
+        </div>
+        <div class="rotator" data-animate>
+          <p id="compliment-line">Tu es la bonne nouvelle de mes journées.</p>
+          <button class="btn ghost" id="next-compliment">Encore un compliment</button>
+        </div>
+      </section>
+
+      <section class="section bento" id="vibes">
+        <div class="bento-card" data-animate>
+          <div class="eyebrow">Playlist douce</div>
+          <h3>Vibes pour ta fête</h3>
+          <ul class="list">
+            <li><span>Sunrise latte</span><small>Lofi + hygge pour bien commencer</small></li>
+            <li><span>Walk in the park</span><small>Rythme chill, sourire garanti</small></li>
+            <li><span>Glow up</span><small>Pop solaire pour chanter sans pression</small></li>
+          </ul>
+        </div>
+        <div class="bento-card" data-animate>
+          <div class="eyebrow">Checklist chill</div>
+          <h3>Plan sans stress</h3>
+          <ul class="list checks">
+            <li>Un café qui réchauffe les mains (et les cœurs)</li>
+            <li>Une playlist qu'on partage</li>
+            <li>Un câlin sur commande</li>
+            <li>Une surprise chuchotée</li>
+          </ul>
+        </div>
+        <div class="bento-card stretch" data-animate>
+          <div class="eyebrow">Micro-journal</div>
+          <h3>Trois choses que j'aime aujourd'hui</h3>
+          <div class="journal">
+            <div>
+              <span>1.</span>
+              <p>La façon dont tu rends chaque plan plus doux.</p>
+            </div>
+            <div>
+              <span>2.</span>
+              <p>Ton sourire qui fait fondre toute la journée.</p>
+            </div>
+            <div>
+              <span>3.</span>
+              <p>Ton humour qui désamorce tout.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section gallery" id="moments">
+        <div class="section-head" data-animate>
+          <div class="eyebrow">Nos moments</div>
+          <h2>Petits cadres pour de grandes vibes</h2>
+          <p>Ajoute dans <code>assets/</code> autant de photos que tu veux, nommées <strong>photo1.jpg</strong>, <strong>photo2.jpg</strong>, etc. Le slider défile automatiquement.</p>
+        </div>
+        <div class="carousel" data-animate>
+          <div class="carousel__viewport">
+            <div class="carousel__image" id="carousel-image"></div>
+            <div class="carousel__caption" id="carousel-caption">Un regard, et tout change.</div>
+          </div>
+          <div class="carousel__controls">
+            <button class="nav prev" id="prev-photo" aria-label="Photo précédente">‹</button>
+            <div class="dots" id="photo-dots"></div>
+            <button class="nav next" id="next-photo" aria-label="Photo suivante">›</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section timeline" id="plan">
+        <div class="section-head" data-animate>
+          <div class="eyebrow">Programme cool</div>
+          <h2>Des plans simples, juste pour nous</h2>
+          <p>Pas de stress : un flow décontracté pour célébrer ta journée.</p>
+        </div>
+        <ul class="timeline-list">
+          <li data-animate>
+            <div class="dot"></div>
+            <div>
+              <h4>Café ou brunch</h4>
+              <p>Commencer tranquille, prendre le temps (et un café qui fait sourire).</p>
+            </div>
+          </li>
+          <li data-animate>
+            <div class="dot"></div>
+            <div>
+              <h4>Balade playlistée</h4>
+              <p>Un peu de musique (ta playlist), une balade main dans la main.</p>
+            </div>
+          </li>
+          <li data-animate>
+            <div class="dot"></div>
+            <div>
+              <h4>Surprise</h4>
+              <p>Un petit cadeau et un moment rien qu'à nous.</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section quote" data-animate>
+        <div class="marquee">
+          <div class="marquee__track">
+            <span>Tu es ma personne préférée</span>
+            <span>Ta lumière adoucit tout</span>
+            <span>J'aime te regarder rire</span>
+            <span>Avec toi, tout est plus simple</span>
+            <span>Tu es ma personne préférée</span>
+            <span>Ta lumière adoucit tout</span>
+            <span>J'aime te regarder rire</span>
+            <span>Avec toi, tout est plus simple</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section note" id="message" data-animate>
+        <div class="floating-heart">❤</div>
+        <h2>Un mot pour toi</h2>
+        <p>Elsa, merci d'exister telle que tu es. Décontractée, brillante, légère et profonde à la fois. Aujourd'hui est ta fête, mais c'est moi qui me sens chanceux. Continuons d'écrire les plus belles pages – avec des éclats de rire, des regards et toutes ces petites choses dont toi seule as le secret.</p>
+        <div class="cta">
+          <a class="btn primary" href="#compliments">Retour aux compliments</a>
+          <a class="btn ghost" href="#plan">Découvrir le programme</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Fait avec beaucoup d'amour. ❤️</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
