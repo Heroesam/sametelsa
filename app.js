@@ -76,21 +76,33 @@ function animateOnScroll() {
 function preloadPhotos(max = 12) {
   return new Promise((resolve) => {
     const found = [];
-    let pending = max;
+    const exts = ['jpeg', 'jpg'];
+    let pending = max * exts.length;
+
     for (let i = 1; i <= max; i += 1) {
-      const src = `assets/photo${i}.jpg`;
-      const img = new Image();
-      img.onload = () => { found.push({ src, caption: `Moment ${found.length + 1}` }); check(); };
-      img.onerror = check;
-      img.src = src;
+      let captured = false;
+      exts.forEach((ext) => {
+        const src = `assets/photo${i}.${ext}`;
+        const img = new Image();
+        img.onload = () => {
+          if (!captured) {
+            captured = true;
+            found.push({ src, caption: `Moment ${found.length + 1}` });
+          }
+          check();
+        };
+        img.onerror = check;
+        img.src = src;
+      });
     }
+
     function check() {
       pending -= 1;
       if (pending === 0) {
         resolve(found.length ? found : [
-          { src: 'assets/photo1.jpg', caption: 'Un regard, et tout change.' },
-          { src: 'assets/photo2.jpg', caption: 'Nos éclats de rire complices.' },
-          { src: 'assets/photo3.jpg', caption: 'Le temps suspendu.' },
+          { src: 'assets/photo1.jpeg', caption: 'Un regard, et tout change.' },
+          { src: 'assets/photo2.jpeg', caption: 'Nos éclats de rire complices.' },
+          { src: 'assets/photo3.jpeg', caption: 'Le temps suspendu.' },
         ]);
       }
     }
